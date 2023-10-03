@@ -12,4 +12,20 @@ public class ProductStock {
         this.stock = stock;
     }
 
+    public boolean isAvailable(int quantity) {
+        return stock >= quantity;
+    }
+
+    public int getValue() {
+        return stock;
+    }
+
+    @Override
+    public String toString() {
+        return String.valueOf(stock);
+    }
+
+    public void minus(int quantity) {
+        stock -= quantity;
+    }
 }
